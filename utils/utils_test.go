@@ -14,3 +14,7 @@ func TestNewUUID(t *testing.T) {
 		fmt.Println("new uuid ", uuid)
 	}
 }
+
+func TestPrintln(t *testing.T) {
+	fmt.Println(1 << 16)
+}
