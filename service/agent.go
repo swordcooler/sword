@@ -43,3 +43,9 @@ func (agent *Agent) Stop() {
 	agent.stoped = true
 
 }
+
+type Header struct {
+	protoType  uint32
+	protoId    uint32
+	dataLength uint32
+}
