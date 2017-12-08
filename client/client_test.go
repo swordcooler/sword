@@ -3,14 +3,17 @@ package client
 import (
 	"fmt"
 	"testing"
+	"time"
 )
 
 func TestClient(t *testing.T) {
 	fmt.Println("start")
-	for i := 0; i < 1; i++ {
+	for i := 0; i < 100; i++ {
 		c := NewClient("192.168.1.189:8888")
-		c.Start()
+		go c.Start()
 	}
+
+	time.Sleep(1000 * time.Second)
 }
 
 func TestPrintln(t *testing.T) {
